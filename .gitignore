@@ -1,0 +1,9 @@
+
+# Ignore specific directories under trained_nns
+DC-OPF-verification/python_based/trained_nns/case162_DCOPF
+DC-OPF-verification/python_based/trained_nns/case118_DCOPF
+DC-OPF-verification/python_based/trained_nns/case57_DCOPF
+
+# Ignore specific CSV files in the data directory
+Explainability-analysis/data/39bus_SD13_method_flows.csv
+Explainability-analysis/data/39bus_SD13_method_ops.csv
