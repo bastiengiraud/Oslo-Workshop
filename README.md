@@ -31,6 +31,9 @@ There are four notebooks, each for a different example. The first two notebooks 
 
 ## Literature
 
+For additional reading on neural network verification, please consider:
+
+```bibtex
 @inproceedings{venzke2020learning,  
   title={Learning optimal power flow: Worst-case guarantees for neural networks},  
   author={Venzke, Andreas and Qu, Guannan and Low, Steven and Chatzivasileiadis, Spyros},  
@@ -39,3 +42,16 @@ There are four notebooks, each for a different example. The first two notebooks 
   year={2020},  
   organization={IEEE}  
 }
+```
+
+For additional reading on the SHAP toolbox, please read:
+
+```bibtex
+@article{lundberg2017unified,
+  title={A unified approach to interpreting model predictions},
+  author={Lundberg, Scott M and Lee, Su-In},
+  journal={Advances in neural information processing systems},
+  volume={30},
+  year={2017}
+}
+```
