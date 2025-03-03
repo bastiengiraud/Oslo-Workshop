@@ -28,3 +28,14 @@ There are four notebooks, each for a different example. The first two notebooks 
 
 - This is work done for the AI-EFFECT project.
 - This project uses the SHAP library (https://github.com/slundberg/shap).
+
+## Literature
+
+@inproceedings{venzke2020learning,  
+  title={Learning optimal power flow: Worst-case guarantees for neural networks},  
+  author={Venzke, Andreas and Qu, Guannan and Low, Steven and Chatzivasileiadis, Spyros},  
+  booktitle={2020 IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids (SmartGridComm)},  
+  pages={1--7},  
+  year={2020},  
+  organization={IEEE}  
+}
