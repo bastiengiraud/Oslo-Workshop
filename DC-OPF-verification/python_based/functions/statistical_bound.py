@@ -218,8 +218,8 @@ class ReluStability:
         scipy.io.savemat(os.path.join(self.nn_path, 'ReLU_always_inactive.mat'), {'ReLU_always_inactive': self.ReLU_always_inactive})
         scipy.io.savemat(os.path.join(self.nn_path, 'ReLU_always_active.mat'), {'ReLU_always_active': self.ReLU_always_active})
         
-        print(f"The share of always active ReLUs: {active_percentage:.2f} %")
-        print(f"The share of always inactive ReLUs: {inactive_percentage:.2f} %")
+        # print(f"The share of always active ReLUs: {active_percentage:.2f} %")
+        # print(f"The share of always inactive ReLUs: {inactive_percentage:.2f} %")
     
 
 

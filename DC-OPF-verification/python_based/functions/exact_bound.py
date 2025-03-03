@@ -217,8 +217,7 @@ class WorstCaseViolationAnalyzer:
                 pg_pred_values = np.array([var.X for var in (self.power_system.pg_pred)])
                     
                 if np.sum(np.abs(pg_pred_nn - pg_pred_values[:,0])) > 1e-3:
-                    print(np.sum(np.abs(pg_pred_nn - pg_pred_values[:,0])))
-                    print(f'Generator {i}, Mismatch in neural network prediction -- PGMAX')
+                    print(f'Generator {i}, Mismatch in neural network prediction -- PGMAX: {np.sum(np.abs(pg_pred_nn - pg_pred_values[:,0]))}')
                     #raise Exception(f'Generator {i}, Mismatch in neural network prediction -- PGMAX')
 
                 mpc_test.load['p_mw'] = pd_NN_values[:,0] * self.mpc.pd_delta + self.mpc.pd_min
@@ -446,7 +445,7 @@ class WorstCaseViolationAnalyzer:
                             else:
                                 pline_viol_max = max(np.array(abs(mpc_test.res_trafo["p_hv_mw"])[i - self.mpc.nl] - self.mpc.rate_a_tf[i - self.mpc.nl]), 0)
                             
-                            if abs(pline_viol_max - (obj.getValue())) > 10e-3:
+                            if abs(pline_viol_max - (obj.getValue())) > 10e-3 and pline_viol_max > 0 and obj.getValue() > 0:
                                 if runs == 0:
                                     print(f"Branch {i}, With Presolve: Mismatch in worst-case violation -- PLINE (Run: {runs}), Violation dcpf: {pline_viol_max}, Violation optimization: {obj.getValue()}")
                                 else:
